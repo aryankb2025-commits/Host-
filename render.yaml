@@ -1,0 +1,32 @@
+# Exported from Render on 2025-11-20T08:31:37Z
+version: "1"
+projects:
+- name: Telegram Bot
+  environments:
+  - name: Production
+services:
+  - type: web
+    name: telegram-bot-host
+    env: python
+    plan: free
+    region: oregon
+    repo: https://github.com/nikhacks14367/bot
+    branch: main
+    autoDeploy: true
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: |
+      python main.py
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: TOKEN
+        value: "8479222213:AAFMM_L2sRGDZ73rnrYHof9e56ah9UjAm3M"
+      - key: OWNER_ID
+        value: "7896890222"
+      - key: ADMIN_ID
+        value: "7896890222"
+      - key: YOUR_USERNAME
+        value: "@BLAZE_X_007"
+      - key: UPDATE_CHANNEL
+        value: "@wiz_x_chk"
