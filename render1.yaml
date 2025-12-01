@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: telegram-bot-host
+    name: wiz-bot
     env: python
     plan: free
     branch: main
